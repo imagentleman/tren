@@ -1,0 +1,67 @@
+<!doctype html>
+
+<meta charset=utf-8>
+<title>Tren - Feed de tarjetas</title>
+
+<link href=https://fonts.googleapis.com/css?family=Poppins:700
+      rel="stylesheet">
+<link href=styles.css
+      rel=stylesheet>
+
+<div class=app>
+  <div>
+    <a class=app-logo
+       href=""
+       onclick=deactivateCard(event)>tren</a>
+  </div>
+
+  <div class=tren>
+    <div class=card
+         onclick=activateCard(event)>
+      <div class=card-bar>
+        <button class=card-bar-toggle></button>
+      </div>
+
+      <div class=card-content>
+        <iframe src=rojo.html></iframe>
+      </div>
+    </div>
+
+    <div class=card
+         onclick=activateCard(event)>
+      <div class=card-bar>
+        <button class=card-bar-toggle></button>
+      </div>
+
+      <div class=card-content>
+        <iframe src=sticky-header.html></iframe>
+      </div>
+    </div>
+
+    <div class=card
+         onclick=activateCard(event)>
+      <div class=card-bar>
+        <button class=card-bar-toggle></button>
+      </div>
+
+      <div class=card-content>
+        <iframe src=decrypt.html></iframe>
+      </div>
+    </div>
+
+    <div class=card>
+      <div class=card-bar>
+        <button class=card-bar-toggle></button>
+      </div>
+
+      <div class=card-content>
+      </div>
+    </div>
+  </div>
+
+  <h1 class="app-title">
+    Feed de tarjetas
+  </h1>
+</div>
+
+<script src="main.js"></script>
