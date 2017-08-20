@@ -1,0 +1,98 @@
+<!doctype html>
+
+<meta charset=utf-8>
+<title>Sticky Header</title>
+
+<link href=https://fonts.googleapis.com/css?family=Poppins:700|Lora
+      rel="stylesheet">
+
+<style>
+  html {
+    font-size: .66vw;
+  }
+
+  body {
+    font-family: 'Poppins';
+    margin: 0;
+  }
+
+  nav {
+    background: #333;
+    height: 10vh;
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+
+  nav.hide-it {
+    display: none;
+  }
+
+  nav.solid {
+    display: block;
+  }
+
+  img {
+    height: 100%;
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 12rem;
+    letter-spacing: -.0608em;
+    margin-bottom: 0;
+    text-align: center;
+  }
+
+  .down-arrow {
+    font-size: 6rem;
+    text-align: center;
+  }
+
+  p {
+    font-family: 'Lora', serif;
+    font-size: 8rem;
+    padding: 0 10%;
+    text-align: center;
+  }
+</style>
+
+<nav></nav>
+
+<header>
+  <img src="bridge-nyc.jpg">
+</header>
+
+<h1>Scroll me down</h1>
+
+<div class=down-arrow>↓</div>
+
+<p>Slowly. On Firefox.</p>
+
+<p>See the sticky Nav flickering.</p>
+
+<p>Can you fix it?</p>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+        crossorigin="anonymous"></script>
+
+<script>
+  var n = $("body > nav"), o = 0;
+
+  function c() {
+    return r = window.pageYOffset,
+    u = r > o ? "down" : "up",
+    o = r,
+    u
+  }
+
+  $(window).bind("scroll", function() {
+      if (!n.hasClass("open")) {
+          var t = c()
+            , i = window.pageYOffset;
+          i > 1 && t == "down" ? n.addClass("hide-it") : n.removeClass("hide-it"),
+          t == "up" && i > 40 ? n.addClass("solid") : n.removeClass("solid")
+      }
+  });
+</script>
