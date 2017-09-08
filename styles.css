@@ -79,7 +79,7 @@ body::before {
   left: 5rem;
   margin: 0;
   max-height: 84vh;
-  position: absolute;
+  position: fixed;
   right: 5rem;
   top: 7rem;
   z-index: 2;
